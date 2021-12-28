@@ -1,0 +1,19 @@
+{
+  "name": "aoc-2021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "solve": "ts-node runner.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/lodash": "^4.14.177",
+    "lodash": "^4.17.21"
+  },
+  "dependencies": {
+    "@types/node": "^16.11.11"
+  }
+}
