@@ -1,6 +1,7 @@
 import _ from 'lodash'
+import {readInput} from '../readInput'
 
-const input = `
+const sampleInput = `
 00100
 11110
 10110
@@ -15,7 +16,7 @@ const input = `
 01010
 `
 
-const diagnostics = input
+const diagnostics = readInput(sampleInput)
   .trim()
   .split('\n')
   .map(number => number.split('').map(bit => +bit as 0 | 1))

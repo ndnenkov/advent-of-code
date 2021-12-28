@@ -1,1 +1,1 @@
-throw('Manual solve. See notes.')
+console.log('Manual solve. See notes.')

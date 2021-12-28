@@ -1,6 +1,7 @@
 import _ from 'lodash'
+import {readInput} from '../readInput'
 
-const input = `
+const sampleInput = `
 be cfbegad cbdgef fgaecd cgeb fdcge agebfd fecdb fabcd edb | fdgacbe cefdb cefbgd gcbe
 edbfga begcd cbg gc gcadebf fbgde acbgfd abcde gfcbed gfec | fcgedb cgb dgebacf gc
 fgaebd cg bdaec gdafb agbcfd gdcbef bgcad gfac gcb cdgabef | cg cg fdcagb cbg
@@ -13,7 +14,7 @@ egadfb cdbfeg cegd fecab cgb gbdefca cg fgcdab egfdb bfceg | gbdfcae bgc cg cgb
 gcafb gcf dcaebfg ecagb gf abcdeg gaef cafbge fdbac fegbdc | fgae cfgab fg bagce
 `
 
-const notes = input
+const notes = readInput(sampleInput)
   .trim()
   .split('\n')
   .map(line => line.split(' | ').map(digits => digits.split(' ')))
@@ -53,6 +54,8 @@ function deduceMapping(digits: string[]): string[] {
   mapping[5] = _.difference(digits, mapping).find(
     digit => !_.difference(chars(digit), chars(mapping[6])).length
   )!
+
+  mapping[2] = _.difference(digits, mapping)[0]
 
   return mapping
 }

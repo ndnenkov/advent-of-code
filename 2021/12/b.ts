@@ -1,6 +1,7 @@
 import _ from 'lodash'
+import {readInput} from '../readInput'
 
-const input = `
+const sampleInput = `
 start-A
 start-b
 A-c
@@ -10,7 +11,7 @@ A-end
 b-end
 `
 
-const graph = input
+const graph = readInput(sampleInput)
   .trim()
   .split('\n')
   .map(line => line.split('-'))

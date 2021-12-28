@@ -1,6 +1,7 @@
 import _ from 'lodash'
+import {readInput} from '../readInput'
 
-const input = `
+const sampleInput = `
 6,10
 0,14
 9,10
@@ -24,12 +25,12 @@ fold along y=7
 fold along x=5
 `
 
-const matrix = input
+const matrix = readInput(sampleInput)
   .trim()
   .split('\n\n')[0]
   .split('\n')
   .map(row => row.split(',').map(coordinate => +coordinate) as [number, number])
-const instructions = input
+const instructions = readInput(sampleInput)
   .trim()
   .split('\n\n')[1]
   .split('\n')

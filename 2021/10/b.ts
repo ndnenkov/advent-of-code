@@ -1,6 +1,7 @@
 import _ from 'lodash'
+import {readInput} from '../readInput'
 
-const input = `
+const sampleInput = `
 [({(<(())[]>[[{[]{<()<>>
 [(()[<>])]({[<{<<[]>>(
 {([(<{}[<>[]}>{[]{[(<()>
@@ -17,7 +18,7 @@ type Opening = '(' | '[' | '{' | '<'
 type Closing = ')' | ']' | '}' | '>'
 type Character = Opening | Closing
 
-const code = input
+const code = readInput(sampleInput)
   .trim()
   .split('\n')
   .map(line => line.split('') as Character[])

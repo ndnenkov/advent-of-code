@@ -1,6 +1,7 @@
 import _ from 'lodash'
+import {readInput} from '../readInput'
 
-const input = `
+const sampleInput = `
 --- scanner 0 ---
 404,-588,-901
 528,-643,409
@@ -145,7 +146,7 @@ interface Scanner {
   beacons: Point[]
 }
 
-const scannerReadings = input
+const scannerReadings = readInput(sampleInput)
   .trim()
   .split('\n\n')
   .map(scanner => _.drop(scanner.split('\n')).map(line => line.split(',').map(Number) as Point))

@@ -1,6 +1,7 @@
 import _ from 'lodash'
+import {readInput} from '../readInput'
 
-const input = `
+const sampleInput = `
 199
 200
 208
@@ -13,7 +14,7 @@ const input = `
 263
 `
 
-const depths = input
+const depths = readInput(sampleInput)
   .trim()
   .split('\n')
   .map(depth => +depth)

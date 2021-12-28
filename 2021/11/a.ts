@@ -1,19 +1,20 @@
 import _ from 'lodash'
+import {readInput} from '../readInput'
 
-const input = `
-4134384626
-7114585257
-1582536488
-4865715538
-5733423513
-8532144181
-1288614583
-2248711141
-6415871681
-7881531438
+const sampleInput = `
+5483143223
+2745854711
+5264556173
+6141336146
+6357385478
+4167524645
+2176841721
+6882881134
+4846848554
+5283751526
 `
 
-const cave = input
+const cave = readInput(sampleInput)
   .trim()
   .split('\n')
   .map(octopuses => octopuses.split('').map(octopus => parseInt(octopus)))

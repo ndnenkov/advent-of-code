@@ -1,6 +1,7 @@
 import _ from 'lodash'
+import {readInput} from '../readInput'
 
-const input = `
+const sampleInput = `
 v...>>.vv>
 .vv>>.vv..
 >>.>v>...v
@@ -12,7 +13,7 @@ v.v..>>v.v
 ....v..v.>
 `
 
-const seaFloor = input
+const seaFloor = readInput(sampleInput)
   .trim()
   .split('\n')
   .map(line => line.split('') as ('.' | '>' | 'v')[])

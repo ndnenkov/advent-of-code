@@ -1,6 +1,7 @@
 import _ from 'lodash'
+import {readInput} from '../readInput'
 
-const input = `
+const sampleInput = `
 on x=-5..47,y=-31..22,z=-19..33
 on x=-44..5,y=-27..21,z=-14..35
 on x=-49..-1,y=-11..42,z=-10..38
@@ -78,7 +79,7 @@ interface RebootStep extends Cuboid {
   type: 'on' | 'off'
 }
 
-const rebootSteps = input
+const rebootSteps = readInput(sampleInput)
   .trim()
   .split('\n')
   .map(line => {

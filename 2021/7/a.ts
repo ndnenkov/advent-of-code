@@ -1,10 +1,11 @@
 import _ from 'lodash'
+import {readInput} from '../readInput'
 
-const input = `
+const sampleInput = `
 16,1,2,0,4,2,7,1,2,14
 `
 
-const crabs = input
+const crabs = readInput(sampleInput)
   .trim()
   .split(',')
   .map(position => +position)

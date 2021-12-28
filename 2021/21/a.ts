@@ -1,9 +1,12 @@
 import _ from 'lodash'
+import {readInput} from '../readInput'
 
-const input = `
+const sampleInput = `
 Player 1 starting position: 4
 Player 2 starting position: 8
 `
+
+const input = readInput(sampleInput)
 
 const player1Position = +input.match(/Player 1 starting position: (\d+)/)![1]
 const player2Position = +input.match(/Player 2 starting position: (\d+)/)![1]

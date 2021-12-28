@@ -1,6 +1,7 @@
 import _ from 'lodash'
+import {readInput} from '../readInput'
 
-const input = `
+const sampleInput = `
 A0016C880162017C3686B18A3D4780
 `
 
@@ -11,7 +12,7 @@ interface Instruction {
   subInstructions?: Instruction[]
 }
 
-const binary = input
+const binary = readInput(sampleInput)
   .trim()
   .split('')
   .map(digit => parseInt(digit, 16).toString(2).padStart(4, '0'))

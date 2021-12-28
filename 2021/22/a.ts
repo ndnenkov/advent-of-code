@@ -1,6 +1,7 @@
 import _ from 'lodash'
+import {readInput} from '../readInput'
 
-const input = `
+const sampleInput = `
 on x=-20..26,y=-36..17,z=-47..7
 on x=-20..33,y=-21..23,z=-26..28
 on x=-22..28,y=-29..23,z=-38..16
@@ -32,7 +33,7 @@ interface RebootStep {
   z: {min: number; max: number}
 }
 
-const rebootSteps = input
+const rebootSteps = readInput(sampleInput)
   .trim()
   .split('\n')
   .map(line => {

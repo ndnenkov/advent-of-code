@@ -1,6 +1,7 @@
 import _ from 'lodash'
+import {readInput} from '../readInput'
 
-const input = `
+const sampleInput = `
 ..#.#..#####.#.#.#.###.##.....###.##.#..###.####..#####..#....#..#..##..###..######.###...####..#..#####..##..#.#####...##.#.#..#.##..#.#......#.###.######.###.####...#.##.##..#..#..#####.....#.#....###..#.##......#.....#..#..#..##..#...##.######.####.####.#.#...#.......#..#.#.#...####.##.#......#..#...##.#.##..#...##.#.##..###.#......#.#.......#.#.#.####.###.##...#.....####.#..#..#.##.#....##..#.####....##...##..#...#......#.#.......#.......##..####..#...#.#.#...##..#.#..###..#####........#..####......#..#
 
 #..#.
@@ -10,8 +11,8 @@ const input = `
 ..###
 `
 
-const algorithm = input.trim().split('\n\n')[0].split('') as ('.' | '#')[]
-const image = input.trim().split('\n\n')[1]
+const algorithm = readInput(sampleInput).trim().split('\n\n')[0].split('') as ('.' | '#')[]
+const image = readInput(sampleInput).trim().split('\n\n')[1]
 
 function padImage(image: string) {
   const lineLength = image.split('\n')[0].length

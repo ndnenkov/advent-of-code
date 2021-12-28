@@ -1,6 +1,7 @@
 import _ from 'lodash'
+import {readInput} from '../readInput'
 
-const input = `
+const sampleInput = `
 1163751742
 1381373672
 2136511328
@@ -13,7 +14,7 @@ const input = `
 2311944581
 `
 
-const cave = input
+const cave = readInput(sampleInput)
   .trim()
   .split('\n')
   .map(line => line.split('').map(risk => +risk))

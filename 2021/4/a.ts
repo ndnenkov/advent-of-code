@@ -1,6 +1,7 @@
 import _ from 'lodash'
+import {readInput} from '../readInput'
 
-const input = `
+const sampleInput = `
 7,4,9,5,11,17,23,2,0,14,21,24,10,16,13,6,15,25,12,22,18,20,8,19,3,26,1
 
 22 13 17 11  0
@@ -22,8 +23,11 @@ const input = `
  2  0 12  3  7
 `
 
+const input = readInput(sampleInput)
+
 const numbers = input
-  .split('\n')[1]
+  .trim()
+  .split('\n')[0]
   .split(',')
   .map(number => parseInt(number))
 

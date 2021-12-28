@@ -1,6 +1,7 @@
 import _ from 'lodash'
+import {readInput} from '../readInput'
 
-const input = `
+const sampleInput = `
 0,9 -> 5,9
 8,0 -> 0,8
 9,4 -> 3,4
@@ -13,7 +14,7 @@ const input = `
 5,5 -> 8,2
 `
 
-const lines = input
+const lines = readInput(sampleInput)
   .trim()
   .split('\n')
   .map(line =>

@@ -1,6 +1,7 @@
 import _ from 'lodash'
+import {readInput} from '../readInput'
 
-const input = `
+const sampleInput = `
 NNCB
 
 CH -> B
@@ -20,6 +21,8 @@ BC -> B
 CC -> N
 CN -> C
 `
+
+const input = readInput(sampleInput)
 
 const template = input.trim().split('\n\n')[0]
 

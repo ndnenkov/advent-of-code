@@ -1,6 +1,7 @@
 import _ from 'lodash'
+import {readInput} from '../readInput'
 
-const input = `
+const sampleInput = `
 forward 5
 down 5
 forward 8
@@ -9,7 +10,7 @@ down 8
 forward 2
 `
 
-const instructions = input
+const instructions = readInput(sampleInput)
   .trim()
   .split('\n')
   .map(instruction => instruction.split(' '))

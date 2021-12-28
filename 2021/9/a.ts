@@ -1,6 +1,7 @@
 import _ from 'lodash'
+import {readInput} from '../readInput'
 
-const input = `
+const sampleInput = `
 2199943210
 3987894921
 9856789892
@@ -8,7 +9,7 @@ const input = `
 9899965678
 `
 
-const heightmap = input
+const heightmap = readInput(sampleInput)
   .trim()
   .split('\n')
   .map(line => line.split('').map(height => +height))
