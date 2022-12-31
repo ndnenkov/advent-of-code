@@ -18,8 +18,9 @@ CrZsJsPPZsGzwwsLwLmpwMDw
 (def input (aoc.2022/read-input sample-input))
 
 (def bags (->> input
-              str/split-lines
-              (map #(split-at (/ (count %) 2) (seq %)))))
+               str/trim
+               str/split-lines
+               (map #(split-at (/ (count %) 2) (seq %)))))
 
 (defn priority [item-type]
   (let [item-ascii (int item-type)

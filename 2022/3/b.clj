@@ -18,6 +18,7 @@ CrZsJsPPZsGzwwsLwLmpwMDw
 (def input (aoc.2022/read-input sample-input))
 
 (def elf-triplets (->> input
+                       str/trim
                        str/split-lines
                        (map seq)
                        (partition 3)))

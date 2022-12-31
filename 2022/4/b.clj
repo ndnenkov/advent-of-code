@@ -22,7 +22,7 @@
     [[(Integer/parseInt first-from) (Integer/parseInt first-to)]
      [(Integer/parseInt second-from) (Integer/parseInt second-to)]]))
 
-(def assignments (->> input str/split-lines (map parse-assignment)))
+(def assignments (->> input str/trim str/split-lines (map parse-assignment)))
 
 (defn overlap? [first-elf second-elf]
   (let [first-section (set (range (first first-elf) (inc (last first-elf))))

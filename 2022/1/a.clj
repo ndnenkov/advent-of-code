@@ -25,6 +25,7 @@
 (def input (aoc.2022/read-input sample-input))
 
 (def elves (-> input
+               str/trim
                (str/split #"\n\n")
                (->> (map str/split-lines)
                     (map (fn [elf] (->> elf

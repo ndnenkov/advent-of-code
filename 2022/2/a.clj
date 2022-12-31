@@ -14,6 +14,7 @@ C Z
 (def input (aoc.2022/read-input sample-input))
 
 (def rounds (->> input
+                 str/trim
                  str/split-lines
                  (map #(str/split % #"\s"))))
 
